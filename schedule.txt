@@ -1,0 +1,9 @@
+1. functionality
+    data:
+        save note with date, tag, 
+        tag folder
+        export/import
+
+2. input(ui)
+    format    
+    
