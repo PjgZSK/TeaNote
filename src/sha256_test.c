@@ -2,12 +2,12 @@
 #include <stdio.h>
 #include <string.h>
 
-int test_sha256(char* str1, char* correct_hash)
+int test_sha256(char* str, char* correct_hash)
 {
     uint8_t bytes[32];
     SHA256_CTX ctx;
     sha256_init(&ctx);
-    sha256_update(&ctx, str1, strlen(str1));
+    sha256_update(&ctx, str, strlen(str));
     sha256_final(&ctx, bytes);
 
     char hash[64];
@@ -16,12 +16,12 @@ int test_sha256(char* str1, char* correct_hash)
     {
         printf(
             "error, %s 's hash value should be:\n%s\nerror hash:\n%s\n\n",
-            str1,
+            str,
             correct_hash,
             hash);
         return -1;
     }
-    printf("bingo, %s 's hash value is:\n%s\n\n", str1, hash);
+    printf("bingo, %s 's hash value is:\n%s\n\n", str, hash);
     return 0;
 }
 
