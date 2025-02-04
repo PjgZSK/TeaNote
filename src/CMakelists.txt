@@ -12,6 +12,7 @@ target_sources(entry PRIVATE
     object.cpp
     commit.cpp
     main.cpp
+    sha256.c
 )
 
 # extra include search path
