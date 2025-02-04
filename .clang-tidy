@@ -83,6 +83,9 @@ Checks: " \
   , readability-* \
   , -readability-convert-member-functions-to-static \
   , modernize-* \
+  , -readability-magic-numbers \
+  , -readability-identifier-length \
+  , -readability-braces-around-statements \
   "
 
 CheckOptions:
@@ -94,10 +97,6 @@ CheckOptions:
     value: true
   - key: readability-function-cognitive-complexity.IgnoreMacros
     value: true
-  - key: readability-magic-numbers.IgnoredIntegerValues
-    value: "1;2;3;4;10;100;1000;60;80;3600;9600;57600;115200;128;255;1000000"
-  - key: readability-magic-numbers.IgnoredFloatingPointValues
-    value: "1;2;3;4;10;100;1000;0.5;0.2;0.3"
   - key: readability-identifier-length.IgnoredVariableNames
     value: "^(fs|c|ms|fh|t|bd|s|hz|id|[abcijkxyz])$"
   - key: readability-identifier-length.IgnoredParameterNames
