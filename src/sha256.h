@@ -1,7 +1,7 @@
 #ifndef SHA256_HPP
 #define SHA256_HPP
 
-typedef char uint8_t;
+typedef unsigned char uint8_t;
 typedef unsigned short uint16_t;
 typedef unsigned int uint32_t;
 typedef unsigned long long uint64_t;
@@ -16,6 +16,6 @@ typedef struct
 
 void sha256_init(SHA256_CTX* ctx);
 void sha256_update(SHA256_CTX* ctx, void* data, uint64_t len);
-void sha256_final(SHA256_CTX* ctx);
+void sha256_final(SHA256_CTX* ctx, uint8_t bytes[]);
 
 #endif
